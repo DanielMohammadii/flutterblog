@@ -42,8 +42,7 @@ class bloglist extends StatelessWidget {
     return ListView.builder(
       itemCount: 5,
       itemBuilder: ((context, index) {
-        return SizedBox(
-            height: double.infinity, width: double.infinity, child: Card());
+        return SizedBox(height: 50, width: 50, child: Card());
       }),
     );
   }
