@@ -1,7 +1,6 @@
 import 'package:addttofirestore/vieew/add_blog.dart';
 import 'package:addttofirestore/vieew/detail_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
@@ -25,10 +24,10 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 5, 24, 11),
+      backgroundColor: const Color.fromARGB(255, 5, 24, 11),
       appBar: AppBar(
-        title: Text('BlogPosts'),
-        backgroundColor: Color.fromARGB(255, 5, 41, 24),
+        title: const Text('BlogPosts'),
+        backgroundColor: const Color.fromARGB(255, 5, 41, 24),
       ),
       body: StreamBuilder(
         stream: _firestoreRef.snapshots(),
@@ -43,7 +42,7 @@ class _MainPageState extends State<MainPage> {
             itemBuilder: ((context, index) {
               final DocumentSnapshot documentSnapshot =
                   streamSnapshot.data!.docs[index];
-              return Container(
+              return SizedBox(
                 height: 180,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -76,21 +75,21 @@ class _MainPageState extends State<MainPage> {
                                 ),
                                 textAlign: TextAlign.center,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 3,
                               ),
                               Text(
                                 documentSnapshot['name'],
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Colors.white, fontSize: 18),
                                 textAlign: TextAlign.center,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 8,
                               ),
                               Text(
                                 documentSnapshot['blog'],
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Colors.white, fontSize: 16),
                                 textAlign: TextAlign.center,
                                 overflow: TextOverflow.ellipsis,
@@ -114,7 +113,7 @@ class _MainPageState extends State<MainPage> {
             MaterialPageRoute(builder: (context) => const AddBlog()),
           );
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );

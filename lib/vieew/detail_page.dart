@@ -14,11 +14,11 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 15, 70, 17),
+      backgroundColor: const Color.fromARGB(255, 15, 70, 17),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 77, 70, 70),
+        backgroundColor: const Color.fromARGB(255, 77, 70, 70),
         elevation: 0,
-        title: Text('blog'),
+        title: const Text('blog'),
         centerTitle: true,
       ),
       body: Column(
@@ -31,7 +31,7 @@ class _DetailPageState extends State<DetailPage> {
               fontSize: 20,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 13,
           ),
           Text(
@@ -41,21 +41,21 @@ class _DetailPageState extends State<DetailPage> {
               fontSize: 18,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 'Blog',
-                style: const TextStyle(
+                style: TextStyle(
                   color: Colors.white,
                   fontSize: 45,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Text(

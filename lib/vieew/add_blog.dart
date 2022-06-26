@@ -19,7 +19,6 @@ class _AddBlogState extends State<AddBlog> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     authNamecontroller.dispose();
     titlcontroller.dispose();
     blogcontroller.dispose();
@@ -62,11 +61,11 @@ class _AddBlogState extends State<AddBlog> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 77, 70, 70),
+        backgroundColor: const Color.fromARGB(255, 77, 70, 70),
         elevation: 0,
-        title: Text('Flutter Blog'),
+        title: const Text('Flutter Blog'),
       ),
-      backgroundColor: Color.fromARGB(255, 112, 105, 105),
+      backgroundColor: const Color.fromARGB(255, 112, 105, 105),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
         child: SingleChildScrollView(
@@ -75,7 +74,7 @@ class _AddBlogState extends State<AddBlog> {
               image != null
                   ? Stack(
                       children: [
-                        Container(
+                        SizedBox(
                           height: 200,
                           width: MediaQuery.of(context).size.width,
                           child: Image.file(
@@ -88,7 +87,7 @@ class _AddBlogState extends State<AddBlog> {
                             onPressed: () {
                               imagePick();
                             },
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.add_a_photo,
                               color: Colors.white,
                             ),
@@ -102,14 +101,14 @@ class _AddBlogState extends State<AddBlog> {
                           onPressed: () {
                             imagePick();
                           },
-                          icon: Icon(Icons.add_a_photo),
+                          icon: const Icon(Icons.add_a_photo),
                         ),
                       ),
                       color: Colors.white,
                       width: MediaQuery.of(context).size.width,
                       height: 200,
                     ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Column(
@@ -136,7 +135,7 @@ class _AddBlogState extends State<AddBlog> {
                     style: const TextStyle(
                       color: Colors.white,
                     ),
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelStyle: TextStyle(color: Colors.white),
                       labelText: 'Blog',
                     ),
@@ -145,7 +144,7 @@ class _AddBlogState extends State<AddBlog> {
                     onPressed: () {
                       uploaddata();
                     },
-                    child: Text('Upload to Storag'),
+                    child: const Text('Upload to Storag'),
                   ),
                 ],
               )
